@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_castle/firebaseDB.dart';
+import 'package:smart_castle/devices/services/firebaseDB.dart';
 
 import 'deviceListView.dart';
 

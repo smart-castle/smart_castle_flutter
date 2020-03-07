@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:smart_castle/firebaseDB.dart';
+import 'package:smart_castle/devices/appFrame.dart';
+import 'package:smart_castle/devices/services/firebaseDB.dart';
 
-import 'appFrame.dart';
 import 'login/login.dart';
 
 class Wrapper extends StatelessWidget {

@@ -1,8 +1,9 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:smart_castle/device.dart';
-import 'package:smart_castle/firebaseDB.dart';
+import 'package:smart_castle/devices/services/firebaseDB.dart';
+
+import 'models/device.dart';
 
 class DeviceListView extends StatefulWidget {
   DeviceListView(this.database);
