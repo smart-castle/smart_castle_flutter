@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "214748823975",
+    "firebase_url": "https://smartcastle-fcd91.firebaseio.com",
+    "project_id": "smartcastle-fcd91",
+    "storage_bucket": "smartcastle-fcd91.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214748823975:android:be38fd8046bc8914787682",
+        "android_client_info": {
+          "package_name": "com.kollock5.smart_castle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "214748823975-ojstu28k89pi8g0gou3l7vva8rl9mjve.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDd6SHDlCCyEIa3FhCVYCdIKwYCcPe18qw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "214748823975-ojstu28k89pi8g0gou3l7vva8rl9mjve.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

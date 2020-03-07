@@ -1,4 +1,4 @@
-package com.example.smart_castle
+package com.kollock5.smart_castle
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
