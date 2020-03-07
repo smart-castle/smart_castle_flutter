@@ -29,13 +29,11 @@ class _DeviceListViewState extends State<DeviceListView> {
   @override
   Widget build(BuildContext context) {
     log(devices[0].name);
-    return Expanded(
-      child: ListView.builder(
-        itemCount: devices.length,
-        itemBuilder: (BuildContext context, int index) {
-          return devicesItem(context, index);
-        },
-      ),
+    return ListView.builder(
+      itemCount: devices.length,
+      itemBuilder: (BuildContext context, int index) {
+        return devicesItem(context, index);
+      },
     );
   }
 
