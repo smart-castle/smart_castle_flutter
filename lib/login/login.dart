@@ -50,7 +50,6 @@ class _LoginState extends State<Login> {
                 }
               },
             ),
-            Container(child: Image(image: AssetImage('images/widukind.png'))),
           ],
         ),
       )),
