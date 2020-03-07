@@ -1,10 +1,13 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:smart_castle/tabView.dart';
+import 'package:smart_castle/firebaseDB.dart';
 
+import 'appFrame.dart';
 import 'login/login.dart';
 
 class Wrapper extends StatelessWidget {
+  FirebaseDB database;
+
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<FirebaseUser>(
@@ -15,7 +18,10 @@ class Wrapper extends StatelessWidget {
           if (user == null) {
             return Login();
           }
-          return MyTabbedPage();
+          if (database == null) {
+            database = FirebaseDB(user);
+          }
+          return AppFrame(database);
         } else {
           return Scaffold(
             body: Center(
