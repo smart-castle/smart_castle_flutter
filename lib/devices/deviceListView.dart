@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:smart_castle/devices/services/firebaseDB.dart';
 
@@ -40,8 +38,37 @@ class _DeviceListViewState extends State<DeviceListView> {
   Widget devicesItem(BuildContext context, int index) {
     return Card(
       child: ListTile(
-        title: Text(devices[index].name),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Text(
+              devices[index].name,
+              textScaleFactor: 1.4,
+            ),
+            Icon(Icons.devices)
+          ],
+        ),
+        subtitle: Column(
+          children: <Widget>[
+            Divider(),
+            ListView.builder(
+              shrinkWrap: true,
+              itemCount: devices[index].services.length,
+              itemBuilder: (BuildContext context, int index2) {
+                return servicesItem(context, devices[index], index2);
+              },
+            ),
+          ],
+        ),
       ),
+    );
+  }
+
+  Widget servicesItem(BuildContext context, Device device, int index) {
+    return ListTile(
+      contentPadding: EdgeInsets.all(0),
+      title: Text(device.services[index].name),
+      trailing: Text(device.services[index].data.values.last.toString()),
     );
   }
 }

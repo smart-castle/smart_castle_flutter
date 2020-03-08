@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:firebase_database/firebase_database.dart';
 import 'package:smart_castle/devices/models/deviceServices.dart';
 
@@ -23,6 +21,7 @@ class Device {
 
   toJason() {
     return {
+      //TODO fix to Jason
       'number': positon,
       'id': name,
       'description': description,

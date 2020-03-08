@@ -1,7 +1,3 @@
-import 'dart:developer';
-
-import 'package:firebase_database/firebase_database.dart';
-
 class DeviceServices {
   String key;
   int typ;
@@ -22,6 +18,7 @@ class DeviceServices {
 
   toJason() {
     return {
+      //TODO fix to Jason
       'typ': typ,
       'name': name,
       'data': data,
