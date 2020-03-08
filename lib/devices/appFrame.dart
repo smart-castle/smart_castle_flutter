@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smart_castle/devices/services/firebaseDB.dart';
+import 'package:smart_castle/notification/firebase_notification_handler.dart';
 
 import 'deviceListView.dart';
 
@@ -11,7 +12,10 @@ class AppFrame extends StatefulWidget {
 }
 
 class _AppFrameState extends State<AppFrame> {
-  _AppFrameState(this.database);
+  _AppFrameState(this.database) {
+    new FirebaseNotifications().setUpFirebase();
+  }
+
   final FirebaseDB database;
   @override
   Widget build(BuildContext context) {
