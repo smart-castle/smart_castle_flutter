@@ -12,7 +12,7 @@ class Device {
 
   Device.fromSnapshot(DataSnapshot snapshot) {
     key = snapshot.key;
-    positon = snapshot.value['positon'].toInt();
+    positon = int.parse(snapshot.value['positon']);
     name = snapshot.value['name'];
     description = snapshot.value['description'];
     snapshot.value['services']

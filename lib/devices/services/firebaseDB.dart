@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
@@ -27,11 +29,13 @@ class FirebaseDB extends ChangeNotifier {
     var device =
         devices.singleWhere((element) => element.key == event.snapshot.key);
     devices[devices.indexOf(device)] = Device.fromSnapshot(event.snapshot);
+    log(devices.length.toString());
     notifyListeners();
   }
 
   _onEntryAdded(Event event) {
     devices.add(Device.fromSnapshot(event.snapshot));
+    log(devices.length.toString());
     notifyListeners();
   }
 }

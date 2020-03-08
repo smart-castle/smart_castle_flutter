@@ -11,7 +11,7 @@ class DeviceServices {
 
   DeviceServices.fromMap(String key, Map service) {
     key = this.key;
-    typ = service['type'];
+    typ = int.parse(service['type']);
     name = service['name'];
     data = service['data'];
   }
